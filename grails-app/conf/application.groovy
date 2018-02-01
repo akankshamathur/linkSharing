@@ -100,5 +100,9 @@ grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/login/success'
 grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/login/index'
 grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.auth.loginFromUrl = "/login/index"
+grails.plugin.springsecurity.rejectIfNoRule = true
+grails.plugin.springsecurity.fii.rejectPublicInvocations = false
+
+
 
 
