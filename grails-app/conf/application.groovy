@@ -8,7 +8,7 @@ environments {
     development {
         grails.serverURL = "http://dev.moniday.com:8080"
         dataSource {
-            dbCreate = "update"
+            dbCreate = "none"
             url = "jdbc:mysql://localhost:3306/linkshare_dev?autoreconnect=true"
             username = "root"
             logSql = false

@@ -10,6 +10,7 @@ buildscript {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.5.0'
         classpath "org.grails.plugins:hibernate:4.3.10.5"
+        classpath 'org.grails.plugins:database-migration:2.0.1'
     }
 }
 
@@ -51,7 +52,10 @@ dependencyManagement {
 }
 
 dependencies {
-    runtime ":database-migration:1.4.0"
+
+    compile 'org.grails.plugins:database-migration:2.0.1'
+    compile 'org.liquibase:liquibase-core:3.5.3'
+    //runtime ":database-migration:1.4.0"
     compile 'org.grails.plugins:spring-security-core:3.1.1'
     compile 'mysql:mysql-connector-java:5.1.36'
     compile "org.springframework.boot:spring-boot-starter-logging"
@@ -79,4 +83,11 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
+}
+sourceSets {
+    main {
+        resources {
+            srcDir 'grails-app/migrations'
+        }
+    }
 }
