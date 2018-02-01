@@ -51,6 +51,7 @@ dependencyManagement {
 }
 
 dependencies {
+    runtime ":database-migration:1.4.0"
     compile 'org.grails.plugins:spring-security-core:3.1.1'
     compile 'mysql:mysql-connector-java:5.1.36'
     compile "org.springframework.boot:spring-boot-starter-logging"
