@@ -17,6 +17,14 @@ class BootStrap {
         if (!adminUser.authorities.contains(adminRole)) {
             UserRole.create adminUser, adminRole
         }
+        def user = User.findByUsername('akanksha') ?: new User(
+                username: 'akanksha',
+                password: springSecurityService.encodePassword('akanksha'),
+                enabled: true).save(failOnError: true)
+
+        if (!user.authorities.contains(userRole)) {
+            UserRole.create user, userRole
+        }
 
     }
     def destroy = {
