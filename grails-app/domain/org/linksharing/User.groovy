@@ -1,4 +1,4 @@
-package linkSharing
+package org.linksharing
 
 import grails.plugin.springsecurity.SpringSecurityService
 import groovy.transform.EqualsAndHashCode
@@ -8,7 +8,7 @@ import grails.compiler.GrailsCompileStatic
 @GrailsCompileStatic
 @EqualsAndHashCode(includes='username')
 @ToString(includes='username', includeNames=true, includePackage=false)
-class SecUser implements Serializable {
+class User implements Serializable {
 
 	private static final long serialVersionUID = 1
 
@@ -21,8 +21,8 @@ class SecUser implements Serializable {
 	boolean accountLocked
 	boolean passwordExpired
 
-	Set<SecRole> getAuthorities() {
-		(SecUserSecRole.findAllBySecUser(this) as List<SecUserSecRole>)*.secRole as Set<SecRole>
+	Set<Role> getAuthorities() {
+		(UserRole.findAllByUser(this) as List<UserRole>)*.role as Set<Role>
 	}
 
 	def beforeInsert() {

@@ -71,11 +71,10 @@ environments {
     }
 }
 
-
 // Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'linkSharing.SecUser'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'linkSharing.SecUserSecRole'
-grails.plugin.springsecurity.authority.className = 'linkSharing.SecRole'
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'org.linksharing.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'org.linksharing.UserRole'
+grails.plugin.springsecurity.authority.className = 'org.linksharing.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
@@ -97,4 +96,9 @@ grails.plugin.springsecurity.filterChain.chainMap = [
 	[pattern: '/**/favicon.ico', filters: 'none'],
 	[pattern: '/**',             filters: 'JOINED_FILTERS']
 ]
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/login/success'
+grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/login/index'
+grails.plugin.springsecurity.logout.postOnly = false
+grails.plugin.springsecurity.auth.loginFromUrl = "/login/index"
+
 

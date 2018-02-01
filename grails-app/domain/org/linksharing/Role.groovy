@@ -1,4 +1,4 @@
-package linkSharing
+package org.linksharing
 
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
@@ -7,7 +7,7 @@ import grails.compiler.GrailsCompileStatic
 @GrailsCompileStatic
 @EqualsAndHashCode(includes='authority')
 @ToString(includes='authority', includeNames=true, includePackage=false)
-class SecRole implements Serializable {
+class Role implements Serializable {
 
 	private static final long serialVersionUID = 1
 
