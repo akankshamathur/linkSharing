@@ -76,9 +76,3 @@ hibernate:
 endpoints:
     jmx:
         unique-names: true
-
-grails:
-    plugin:
-        databasemigration:
-            updateOnStart: true
-            updateOnStartFileNames: changelog.groovy

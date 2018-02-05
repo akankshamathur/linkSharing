@@ -8,10 +8,9 @@ class Topic {
     String topicName
 
     static belongsTo = [User]
-    static hasMany=[]
 
     static constraints = {
-
+        topicName blank: true
     }
 
 }

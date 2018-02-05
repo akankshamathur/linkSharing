@@ -6,25 +6,25 @@ class BootStrap {
     def springSecurityService
 
     def init = {servletContext ->
-        def userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save(failOnError: true)
-        def adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save(failOnError: true)
+        Role userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save(failOnError: true)
+        Role adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save(failOnError: true)
 
-        def adminUser = User.findByUsername('admin') ?: new User(
+        User adminUser = User.findByUsername('admin') ?: new User(
                 username: 'admin',
-                password: springSecurityService.encodePassword('admin'),
-                enabled: true).save(failOnError: true)
+                password: "admin").save(failOnError: true)
 
         if (!adminUser.authorities.contains(adminRole)) {
             UserRole.create adminUser, adminRole
         }
-        def user = User.findByUsername('akanksha') ?: new User(
+        User user = User.findByUsername('akanksha') ?: new User(
                 username: 'akanksha',
-                password: springSecurityService.encodePassword('akanksha'),
-                enabled: true).save(failOnError: true)
+                password: 'akanksha').save(failOnError: true)
 
         if (!user.authorities.contains(userRole)) {
             UserRole.create user, userRole
         }
+       /* User user1 = new User(username: "admin2", password: "admin2", enabled: true).save(flush:true, failOnError : true)
+        new UserRole(user1,adminRole).save(flush:true)*/
 
     }
     def destroy = {

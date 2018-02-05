@@ -5,16 +5,30 @@
 
 <body>
 <link rel="stylesheet" href="grails-app/assets/stylesheets">
+<asset :javascript src="assets/javascripts "></asset>
+<asset :stylesheet src="assets/stylesheets"></asset>
 
-<div class="container">
-    <div class="top_bar">Login</div>
-    <g:form name="login_form" controller="">
-        <label>Email/Username</label> &nbsp; <input type="text" size="75" name="username" required><br>
-        <label>Password</label> &nbsp; <input type="password" size="80" name="password" required><br>
-        <g:link controller="" action="">Forget Password</g:link> &nbsp; <g:actionSubmit action=""
-                                                                                        value="Login"></g:actionSubmit>
-    </g:form>
+    <div class="p-3 mb-2 bg-info text-white"><b>Login</b></div>
+<table>
+    <form method="POST" action="/login/authenticate" >
+        <tr>
+            <td><label>Email/Username</label> </td>
+            <td><input type="text" size="10" name="username" required></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td> <input type="password" size="10" name="password" required></td>
+        </tr>
 
-</div>
+        <tr>
+            <td><g:link  action="">Forget Password</g:link> </td>
+
+            <td>  <button type="submit" value="Login">submit</button>
+            </td>
+
+        </tr>
+    </form>
+</table>
+
 </body>
 </html>

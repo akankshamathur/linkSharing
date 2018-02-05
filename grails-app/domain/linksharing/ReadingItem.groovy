@@ -1,7 +1,7 @@
 package linksharing
 
 class ReadingItem {
-    String isRead
+    Boolean isRead
 
     static constraints = {
     }

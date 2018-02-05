@@ -6,18 +6,44 @@
 <link rel="stylesheet" href="grails-app/assets/stylesheets">
 <link rel="stylesheet" href="grails-app/assets/javascripts">
 <div class="container">
-    <div class="top_bar"> Register</div>
-    <g:form name="register_form" controller="">
-        <label>First Name</label> &nbsp; <input type="text" size="40" name="firstName" required><br>
-        <label>Last Name</label> &nbsp; <input type="text" size="40"name="lastName" required><br>
-        <label>Email Id</label> &nbsp; <input type="email" size="40"name="email" required><br>
-        <label>Username</label> &nbsp; <input type="text" size="40"name="username" required><br>
-        <label>Password</label> &nbsp; <input type="password" size="40"name="password" required><br>
-        <label>Confirm Password</label> &nbsp; <input type="password" size="40"name="" required><br>
-        <label>Photo</label> &nbsp; <g:actionSubmitImage value="Browse" action=""
-                                                         src="${resource(dir: 'images', file: 'update.gif')}"></g:actionSubmitImage>
-        <g:link controller="" action="">Forget Password</g:link> &nbsp; <g:actionSubmit action="" value="Login"></g:actionSubmit>
-    </g:form>
+    <div class="p-3 mb-2 bg-info text-white"><b>Register</b></div>
+    <table>
+    <form name="register_form" controller="">
+       <tr>
+            <td> <label>First Name</label></td>
+            <td><input type="text" size="10" name="firstName" required></td>
+        </tr>
+        <tr>
+            <td><label>Last Name</label></td>
+            <td><input type="text" size="10"name="lastName" required></td>
+        </tr>
+        <tr>
+            <td><label>Email Id</label></td>
+            <td><input type="email" size="10"name="email" required></td>
+        </tr>
+        <tr>
+            <td><label>Username</label></td>
+            <td><input type="text" size="10"name="username" required></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" size="10"name="password" required></td>
+        </tr>
+        <tr>
+            <td><label>Confirm Password</label></td>
+            <td><input type="password" size="10"name="" required></td>
+        </tr>
+        <tr>
+            <td><label>Photo</label></td>
+            <td><g:actionSubmitImage value="Browse" action=""></g:actionSubmitImage></td>
+        </tr>
+        <tr>
+            <td> <g:link controller="public" action="index">Forget Password</g:link></td>
+            <td><g:actionSubmit action="" value="Login"></g:actionSubmit></td>
+        </tr>
+
+    </form>
+    </table>
 
 </div>
 </body>

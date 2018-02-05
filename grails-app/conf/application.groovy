@@ -27,7 +27,7 @@ environments {
         }
 
     }
-    production {
+    production{
         dataSource {
             username = "root"
             password = "nextdefault"
@@ -46,41 +46,24 @@ environments {
             }
         }
     }
-    staging {
-        grails.serverURL = "http://13.58.157.62"
-        dataSource {
-            dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/linkshare_dev?autoreconnect=true"
-            username = "root"
-            logSql = false
-            password = "7wL3jH2295zWS"
-            pooled = true
-            properties {
-                maxActive = -1
-                minEvictableIdleTimeMillis = 1800000
-                timeBetweenEvictionRunsMillis = 1800000
-                numTestsPerEvictionRun = 3
-                testOnBorrow = true
-                testWhileIdle = true
-                testOnReturn = true
-                validationQuery = "SELECT 1"
-            }
-        }
-
-
-    }
 }
+
+//Database Migration
+grails.plugin.databasemigration.updateOnStart=true
+grails.plugin.databasemigration.updateOnStartFileNames='changelog.groovy'
+
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'org.linksharing.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'org.linksharing.UserRole'
 grails.plugin.springsecurity.authority.className = 'org.linksharing.Role'
-grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/'
-grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/'
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/user/index'
+grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/public/home'
 grails.plugin.springsecurity.logout.postOnly = false
-grails.plugin.springsecurity.auth.loginFromUrl = "/"
-grails.plugin.springsecurity.rejectIfNoRule = true
-grails.plugin.springsecurity.fii.rejectPublicInvocations = false
+grails.plugin.springsecurity.auth.loginFromUrl = "/public/home"
+
+//grails.plugin.springsecurity.rejectIfNoRule = true
+//grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         [pattern: '/', access: ['permitAll']],
         [pattern: '/error', access: ['permitAll']],
