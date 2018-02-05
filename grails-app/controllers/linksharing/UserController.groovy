@@ -2,7 +2,7 @@ package linksharing
 
 import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.annotation.Secured
-import org.linksharing.User
+import com.linksharing.User
 
 
 class UserController {

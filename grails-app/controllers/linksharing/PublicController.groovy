@@ -2,7 +2,7 @@ package linksharing
 
 import grails.plugin.springsecurity.annotation.Secured
 import in.fintechlabs.linksharing.SubscriptionService
-import org.linksharing.User
+import com.linksharing.User
 
 @Secured(['permitAll'])
 class PublicController {

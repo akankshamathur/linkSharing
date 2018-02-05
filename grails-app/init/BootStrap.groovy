@@ -1,12 +1,12 @@
-import org.linksharing.Role
-import org.linksharing.User
-import org.linksharing.UserRole
+import com.linksharing.Role
+import com.linksharing.User
+import com.linksharing.UserRole
 
 class BootStrap {
     def springSecurityService
 
     def init = {servletContext ->
-        Role userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save(failOnError: true)
+        /*Role userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save(failOnError: true)
         Role adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save(failOnError: true)
 
         User adminUser = User.findByUsername('admin') ?: new User(
@@ -22,7 +22,7 @@ class BootStrap {
 
         if (!user.authorities.contains(userRole)) {
             UserRole.create user, userRole
-        }
+        }*/
        /* User user1 = new User(username: "admin2", password: "admin2", enabled: true).save(flush:true, failOnError : true)
         new UserRole(user1,adminRole).save(flush:true)*/
 
