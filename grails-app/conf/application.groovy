@@ -14,13 +14,11 @@ environments {
             logSql = false
             password = "nextdefault"
         }
-
-
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/linkshare_dev?autoreconnect=true"
+            url = "jdbc:mysql://localhost:3306/linkshare_test?autoreconnect=true"
             username = "root"
             logSql = false
             password = "nextdefault"
@@ -32,7 +30,7 @@ environments {
             username = "root"
             password = "nextdefault"
             dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/linkshare_dev?autoreconnect=true&useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://localhost:3306/linkshare_prod?autoreconnect=true&useUnicode=yes&characterEncoding=UTF-8"
             pooled = true
             properties {
                 maxActive = -1

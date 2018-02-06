@@ -6,40 +6,41 @@
 <link rel="stylesheet" href="grails-app/assets/stylesheets">
 <link rel="stylesheet" href="grails-app/assets/javascripts">
 <div class="container-float">
-    <div class="row-fluid"><div class="col-lg-12" align="left">Register</div></div>
-    <table>
+
+    <table  class="table" frame="box">
+        <thead class=""><h3>Register</h3></thead>
     <form name="register_form" controller="">
        <tr>
-            <td> <label>First Name</label></td>
+            <td> First Name</td>
             <td><input type="text" size="10" name="firstName" required></td>
         </tr>
         <tr>
-            <td><label>Last Name</label></td>
+            <td>Last Name</td>
             <td><input type="text" size="10"name="lastName" required></td>
         </tr>
         <tr>
-            <td><label>Email Id</label></td>
+            <td>Email Id</td>
             <td><input type="email" size="10"name="email" required></td>
         </tr>
         <tr>
-            <td><label>Username</label></td>
+            <td>Username</td>
             <td><input type="text" size="10"name="username" required></td>
         </tr>
         <tr>
-            <td><label>Password</label></td>
+            <td>Password</td>
             <td><input type="password" size="10"name="password" required></td>
         </tr>
         <tr>
-            <td><label>Confirm Password</label></td>
+            <td>Confirm Password</td>
             <td><input type="password" size="10"name="" required></td>
         </tr>
         <tr>
-            <td><label>Photo</label></td>
-            <td><g:actionSubmitImage value="Browse" action=""></g:actionSubmitImage></td>
+            <td>Photo</td>
+            <td ><g:actionSubmitImage value="Browse" action=""></g:actionSubmitImage></td>
         </tr>
         <tr>
-            <td> <g:link controller="public" action="index">Forget Password</g:link></td>
-            <td><g:actionSubmit action="" value="Login"></g:actionSubmit></td>
+
+            <td colspan="2" class="col-lg-3"><button class="btn btn-success btn-block" type="submit" value="Register">Register</button>
         </tr>
 
     </form>

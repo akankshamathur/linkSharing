@@ -12,7 +12,7 @@
 
     <div class="row-fluid">
 
-
+<table style="margin-outside: 1px solid">
     <form method="POST" action="/login/authenticate" >
         <tr>
             <td><label>Email/Username</label> </td>
@@ -31,6 +31,7 @@
 
         </tr>
     </form>
+</table>
     </div>
 </div>
 </body>
