@@ -1,7 +1,13 @@
 package com.linkSharing
 
+import com.sun.org.apache.xpath.internal.operations.Bool
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
+import linksharing.ReadingItem
+import linksharing.Resource
+import linksharing.ResourceRating
+import linksharing.Subscription
+import linksharing.Topic
 
 @EqualsAndHashCode(includes='username')
 @ToString(includes='username', includeNames=true, includePackage=false)
@@ -14,10 +20,19 @@ class User implements Serializable {
 	String username
 	String password
 	boolean enabled = true
-	boolean accountExpired
-	boolean accountLocked
-	boolean passwordExpired
+	boolean accountExpired =false
+	boolean accountLocked =false
+	boolean passwordExpired =false
 	String firstName
+	String lastName
+	String emailId
+	Date dateCreated
+	Date lastUpdated
+	Boolean admin
+	String photo
+
+	static hasMany = [topics:Topic , subscriptions : Subscription , readingItems : ReadingItem , resources : Resource , resourceRatings: ResourceRating]
+
 
 	Set<Role> getAuthorities() {
 		UserRole.findAllByUser(this)*.role
@@ -42,6 +57,7 @@ class User implements Serializable {
 	static constraints = {
 		password blank: false, password: true
 		username blank: false, unique: true
+		emailId unique: true
 	}
 
 	static mapping = {
