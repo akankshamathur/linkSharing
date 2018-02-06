@@ -200,5 +200,186 @@ databaseChangeLog = {
             }
         }
     }
+    changeSet(author: "akanksha (generated)", id: "1517922702537-1") {
+        createTable(tableName: "topic_subscription") {
+            column(name: "topic_subscriptions_id", type: "BIGINT")
+
+            column(name: "subscription_id", type: "BIGINT")
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-2") {
+        createTable(tableName: "user_subscription") {
+            column(name: "user_subscriptions_id", type: "BIGINT")
+
+            column(name: "subscription_id", type: "BIGINT")
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-3") {
+        addColumn(tableName: "user") {
+            column(name: "admin", type: "bit") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-4") {
+        addColumn(tableName: "user") {
+            column(name: "date_created", type: "datetime") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-5") {
+        addColumn(tableName: "user") {
+            column(name: "email_id", type: "varchar(255)") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-6") {
+        addColumn(tableName: "user") {
+            column(name: "last_name", type: "varchar(255)") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-7") {
+        addColumn(tableName: "user") {
+            column(name: "last_updated", type: "datetime") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-8") {
+        addColumn(tableName: "user") {
+            column(name: "photo", type: "varchar(255)") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-9") {
+        addColumn(tableName: "reading_item") {
+            column(name: "resources_id", type: "bigint") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-10") {
+        addColumn(tableName: "resource_rating") {
+            column(name: "resources_id", type: "bigint") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-11") {
+        addColumn(tableName: "topic") {
+            column(name: "seriousness", type: "varchar(255)") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-12") {
+        addColumn(tableName: "resource") {
+            column(name: "topics_id", type: "bigint") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-13") {
+        addColumn(tableName: "reading_item") {
+            column(name: "users_id", type: "bigint") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-14") {
+        addColumn(tableName: "resource") {
+            column(name: "users_id", type: "bigint") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-15") {
+        addColumn(tableName: "resource_rating") {
+            column(name: "users_id", type: "bigint") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-16") {
+        addColumn(tableName: "topic") {
+            column(name: "users_id", type: "bigint") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-17") {
+        addUniqueConstraint(columnNames: "email_id", constraintName: "UC_USEREMAIL_ID_COL", tableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-18") {
+        addForeignKeyConstraint(baseColumnNames: "resources_id", baseTableName: "reading_item", constraintName: "FK_a657fs4kyluytmrva54824lty", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "resource")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-19") {
+        addForeignKeyConstraint(baseColumnNames: "users_id", baseTableName: "topic", constraintName: "FK_eh4v72swxn6od4nl02d2huu78", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-20") {
+        addForeignKeyConstraint(baseColumnNames: "subscription_id", baseTableName: "user_subscription", constraintName: "FK_f0dcjs55auqkgcbex3am6f4b7", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "subscription")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-21") {
+        addForeignKeyConstraint(baseColumnNames: "subscription_id", baseTableName: "topic_subscription", constraintName: "FK_fkmfvxg95iyics3mp7tcmo18w", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "subscription")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-22") {
+        addForeignKeyConstraint(baseColumnNames: "topics_id", baseTableName: "resource", constraintName: "FK_fs6rn7ke2wmcyah2sjpidgyxl", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "topic")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-23") {
+        addForeignKeyConstraint(baseColumnNames: "users_id", baseTableName: "reading_item", constraintName: "FK_hs3nqkr6g6337tijc82bn7nnv", deferrable:                                                                                                                                      "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-24") {
+        addForeignKeyConstraint(baseColumnNames: "users_id", baseTableName: "resource", constraintName: "FK_ijl604ox0i2861stw84nrqx6h", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-25") {
+        addForeignKeyConstraint(baseColumnNames: "users_id", baseTableName: "resource_rating", constraintName: "FK_j05t79wu8kvni4c306a58v0q0", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-26") {
+        addForeignKeyConstraint(baseColumnNames: "user_subscriptions_id", baseTableName: "user_subscription", constraintName: "FK_mj594s4qubustx53049g1cwln", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-27") {
+        addForeignKeyConstraint(baseColumnNames: "topic_subscriptions_id", baseTableName: "topic_subscription", constraintName: "FK_sprh51uahn3qpojecrc2fd6vn", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "topic")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-28") {
+        addForeignKeyConstraint(baseColumnNames: "resources_id", baseTableName: "resource_rating", constraintName: "FK_tdr83k5fwq26uvwvagufj614i", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "resource")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517922702537-29") {
+        dropColumn(columnName: "last_updated", tableName: "subscription")
+    }
+
+
 
 }
