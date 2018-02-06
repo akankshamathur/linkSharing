@@ -15,6 +15,7 @@ class UserController {
         //render (view:'user/userDashboard')
     }
 
+
 //
 //        @Secured(['ROLE_ADMIN'])
 //        def validAdmin() {

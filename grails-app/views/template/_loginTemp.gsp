@@ -4,35 +4,32 @@
 </head>
 
 <body>
-<link rel="stylesheet" href="grails-app/assets/stylesheets">
 <asset:stylesheet src="application.css"/>
 <asset:javascript src="application.js"/>
 <div class="container-fluid">
-    <div class="row-fluid"><div class="col-lg-12"> Login</div></div>
+    <table class="table" frame="box">
+        <tr style="border: #010101 ; background-color: #c1e2b3"><h3>Login</h3></tr>
 
-    <div class="row-fluid">
+        <form method="POST" action="/login/authenticate">
+            <tr>
+                <td>Email/Username</td>
+                <td><input type="text" size="30" name="username" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" size="30" name="password" required></td>
+            </tr>
 
-<table style="margin-outside: 1px solid">
-    <form method="POST" action="/login/authenticate" >
-        <tr>
-            <td><label>Email/Username</label> </td>
-            <td><input type="text" size="10" name="username" required></td>
-        </tr>
-        <tr>
-            <td><label>Password</label></td>
-            <td> <input type="password" size="10" name="password" required></td>
-        </tr>
+            <tr>
+                <td><g:link action="">Forget Password</g:link></td>
 
-        <tr>
-            <td><g:link  action="">Forget Password</g:link> </td>
+                <td><button class="btn btn-primary" type="submit" value="Login">submit</button>
+                </td>
 
-            <td>  <button type="submit" value="Login">submit</button>
-            </td>
-
-        </tr>
-    </form>
-</table>
-    </div>
+            </tr>
+        </form>
+    </table>
+</div>
 </div>
 </body>
 </html>

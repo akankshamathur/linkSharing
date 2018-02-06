@@ -1,25 +1,33 @@
 <html>
 <head>
-
+    <title></title>
 </head>
 
-<body>
+<body style="width: 100%">
 <asset:stylesheet src="application.css"/>
-<asset:javascript src="application.js"/>
 
-<div class="jumbotron">
-    <div class="row-fluid"><h2> Link Sharing</h2></div></div>
+%{--<div class="jumbotron">
+    <h2>Link Sharing</h2>
+</div>--}%
+
 <div class="container-fluid">
 
-    <div class="row-fluid">
-        <div class="col-lg-6">  <g:render template="/template/recentShare"></g:render></div>
-        <div class="col-lg-6">  <g:render template="/template/loginTemp"></g:render></div>
-    </div>
-    <div class="row-fluid">
-        <div class="col-lg-6"><g:render template="/template/recentShare"></g:render></div>
-        <div class="col-lg-6"><g:render template="/template/registerTemp"></g:render></div>
-    </div>
-</div>
+    <div class="row">
+        <div class="col-md-5"><g:render template="/template/recentShare"></g:render></div>
 
+        <div class="col-md-2"></div>
+
+        <div class="col-md-5 pull-right"><g:render template="/template/loginTemp"></g:render></div>
+
+        <div class="col-md-5"><g:render template="/template/recentShare"></g:render></div>
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-5 pull-right"><g:render template="/template/registerTemp"></g:render></div>
+
+    </div>
+
+</div>
+<asset:javascript src="application.js"/>
 </body>
 </html>
