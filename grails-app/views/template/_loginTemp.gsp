@@ -5,11 +5,14 @@
 
 <body>
 <link rel="stylesheet" href="grails-app/assets/stylesheets">
-<asset :javascript src="assets/javascripts "></asset>
-<asset :stylesheet src="assets/stylesheets"></asset>
+<asset:stylesheet src="application.css"/>
+<asset:javascript src="application.js"/>
+<div class="container-fluid">
+    <div class="row-fluid"><div class="col-lg-12"> Login</div></div>
 
-    <div class="p-3 mb-2 bg-info text-white"><b>Login</b></div>
-<table>
+    <div class="row-fluid">
+
+
     <form method="POST" action="/login/authenticate" >
         <tr>
             <td><label>Email/Username</label> </td>
@@ -28,7 +31,7 @@
 
         </tr>
     </form>
-</table>
-
+    </div>
+</div>
 </body>
 </html>
