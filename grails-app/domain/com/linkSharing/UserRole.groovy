@@ -1,4 +1,4 @@
-package com.linksharing
+package com.linkSharing
 
 import grails.gorm.DetachedCriteria
 import groovy.transform.ToString

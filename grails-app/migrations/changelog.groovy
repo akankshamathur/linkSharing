@@ -1,6 +1,6 @@
 databaseChangeLog = {
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-1") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-1") {
         createTable(tableName: "reading_item") {
             column(autoIncrement: "true", name: "id", type: "BIGINT") {
                 constraints(primaryKey: "true", primaryKeyName: "reading_itemPK")
@@ -16,7 +16,7 @@ databaseChangeLog = {
         }
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-2") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-2") {
         createTable(tableName: "resource") {
             column(autoIncrement: "true", name: "id", type: "BIGINT") {
                 constraints(primaryKey: "true", primaryKeyName: "resourcePK")
@@ -48,7 +48,7 @@ databaseChangeLog = {
         }
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-3") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-3") {
         createTable(tableName: "resource_rating") {
             column(autoIncrement: "true", name: "id", type: "BIGINT") {
                 constraints(primaryKey: "true", primaryKeyName: "resource_ratingPK")
@@ -62,7 +62,7 @@ databaseChangeLog = {
         }
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-4") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-4") {
         createTable(tableName: "role") {
             column(autoIncrement: "true", name: "id", type: "BIGINT") {
                 constraints(primaryKey: "true", primaryKeyName: "rolePK")
@@ -78,7 +78,7 @@ databaseChangeLog = {
         }
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-5") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-5") {
         createTable(tableName: "subscription") {
             column(autoIncrement: "true", name: "id", type: "BIGINT") {
                 constraints(primaryKey: "true", primaryKeyName: "subscriptionPK")
@@ -102,7 +102,7 @@ databaseChangeLog = {
         }
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-6") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-6") {
         createTable(tableName: "topic") {
             column(autoIncrement: "true", name: "id", type: "BIGINT") {
                 constraints(primaryKey: "true", primaryKeyName: "topicPK")
@@ -126,7 +126,7 @@ databaseChangeLog = {
         }
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-7") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-7") {
         createTable(tableName: "user") {
             column(autoIncrement: "true", name: "id", type: "BIGINT") {
                 constraints(primaryKey: "true", primaryKeyName: "userPK")
@@ -162,7 +162,7 @@ databaseChangeLog = {
         }
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-8") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-8") {
         createTable(tableName: "user_role") {
             column(name: "user_id", type: "BIGINT") {
                 constraints(nullable: "false")
@@ -174,23 +174,31 @@ databaseChangeLog = {
         }
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-9") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-9") {
         addPrimaryKey(columnNames: "user_id, role_id", constraintName: "user_rolePK", tableName: "user_role")
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-10") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-10") {
         addUniqueConstraint(columnNames: "authority", constraintName: "UC_ROLEAUTHORITY_COL", tableName: "role")
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-11") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-11") {
         addUniqueConstraint(columnNames: "username", constraintName: "UC_USERUSERNAME_COL", tableName: "user")
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-12") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-12") {
         addForeignKeyConstraint(baseColumnNames: "user_id", baseTableName: "user_role", constraintName: "FK_apcc8lxk2xnug8377fatvbn04", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "user")
     }
 
-    changeSet(author: "akanksha (generated)", id: "1517837116643-13") {
+    changeSet(author: "akanksha (generated)", id: "1517916435009-13") {
         addForeignKeyConstraint(baseColumnNames: "role_id", baseTableName: "user_role", constraintName: "FK_it77eq964jhfqtu54081ebtio", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "role")
     }
+    changeSet(author: "akanksha (generated)", id: "1517916660508-1") {
+        addColumn(tableName: "user") {
+            column(name: "first_name", type: "varchar(255)") {
+                constraints(nullable: "false")
+            }
+        }
+    }
+
 }

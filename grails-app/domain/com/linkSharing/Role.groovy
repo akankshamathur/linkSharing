@@ -1,4 +1,4 @@
-package com.linksharing
+package com.linkSharing
 
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString

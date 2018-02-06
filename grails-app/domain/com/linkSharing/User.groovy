@@ -1,4 +1,4 @@
-package com.linksharing
+package com.linkSharing
 
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
@@ -9,7 +9,7 @@ class User implements Serializable {
 
 	private static final long serialVersionUID = 1
 
-	def springSecurityService
+	transient springSecurityService
 
 	String username
 	String password
@@ -17,10 +17,10 @@ class User implements Serializable {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
-	String emailId
+	String firstName
 
 	Set<Role> getAuthorities() {
-		(UserRole.findAllByUser(this) as List<UserRole>)*.role as Set<Role>
+		UserRole.findAllByUser(this)*.role
 	}
 
 	def beforeInsert() {
@@ -40,8 +40,8 @@ class User implements Serializable {
 	static transients = ['springSecurityService']
 
 	static constraints = {
-		password nullable: false, blank: false, password: true
-		username nullable: false, blank: false, unique: true
+		password blank: false, password: true
+		username blank: false, unique: true
 	}
 
 	static mapping = {
