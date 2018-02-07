@@ -8,6 +8,7 @@ import com.linkSharing.User
 class PublicController {
     def springSecurityService
     def subscriptionService
+    def userService
 
    /* demo
     @Secured(['permitAll'])
@@ -26,12 +27,10 @@ class PublicController {
             }
 
     }
-    def newUser(){
-
+    def newUser(infor){
+        def user = userService.createUser(params)
+        [user:User]
     }
-
-
-
 }
 
 

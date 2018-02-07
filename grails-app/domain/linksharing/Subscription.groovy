@@ -6,9 +6,9 @@ import grails.web.servlet.mvc.GrailsParameterMap
 class Subscription {
     Date dateCreated
     String seriousness
+Topic topic
 
-
-    static BelongsTo=[users :User,topics: Topic]
+    static belongsTo=[user :User]
 
     static constraints = {
         seriousness blank: true

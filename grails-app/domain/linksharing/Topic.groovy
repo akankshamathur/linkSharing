@@ -9,10 +9,8 @@ class Topic {
     String topicName
     String seriousness
 
-
-    static hasMany = [subscriptions: Subscription , resources : Resource]
-    static belongsTo = [users:User]
-
+    static hasMany = [subscriptions: Subscription, resources: Resource]
+    static belongsTo = [user: User]
 
 
     static constraints = {

@@ -25,7 +25,7 @@ class User implements Serializable {
 	boolean passwordExpired =false
 	String firstName
 	String lastName
-	String emailId
+	String email
 	Date dateCreated
 	Date lastUpdated
 	Boolean admin
@@ -57,10 +57,12 @@ class User implements Serializable {
 	static constraints = {
 		password blank: false, password: true
 		username blank: false, unique: true
-		emailId unique: true
+		email unique: true
 	}
 
 	static mapping = {
 		password column: '`password`'
 	}
 }
+
+
