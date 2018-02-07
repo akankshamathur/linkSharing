@@ -12,7 +12,7 @@
     <table class="table" frame="box">
         <thead class=""><h3>Register</h3></thead>
 
-        <form name="register_form" controller="public">
+        <form name="register_form" controller="public" method="get">
             <tr>
                 <td>First Name</td>
                 <td><input type="text" size="30" name="firstName" required></td>
@@ -35,16 +35,17 @@
             </tr>
             <tr>
                 <td>Confirm Password</td>
-                <td><input type="password" size="30" name="" required></td>
+                <td><input type="password" size="30" name="confirmPassword" required></td>
             </tr>
             <tr>
                 <td>Photo</td>
-                <td><g:actionSubmitImage value="Browse" action="newUser"></g:actionSubmitImage></td>
+                <td><g:actionSubmitImage value="Browse"></g:actionSubmitImage></td>
             </tr>
             <tr>
 
-                <td colspan="2" class="col-lg-3"><button class="btn btn-success btn-block" type="submit"
-                                                         value="Register">Register</button>
+                <td colspan="2" class="col-lg-3">
+                    <g:actionSubmit class="btn btn-success btn-block" value="register"
+                                    action="newUser">Register</g:actionSubmit>
             </tr>
 
         </form>

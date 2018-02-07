@@ -297,4 +297,28 @@ databaseChangeLog = {
     changeSet(author: "akanksha (generated)", id: "1517982895455-23") {
         addForeignKeyConstraint(baseColumnNames: "user_id", baseTableName: "subscription", constraintName: "FK_tq3cq3gmsss8jjyb2l5sb1o6k", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "user")
     }
+    changeSet(author: "akanksha (generated)", id: "1517992612235-22") {
+        dropNotNullConstraint(columnDataType: "varchar(255)", columnName: "email", tableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517992612235-23") {
+        dropNotNullConstraint(columnDataType: "varchar(255)", columnName: "first_name", tableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517992612235-24") {
+        dropNotNullConstraint(columnDataType: "varchar(255)", columnName: "last_name", tableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517992612235-25") {
+        dropNotNullConstraint(columnDataType: "varchar(255)", columnName: "password", tableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517992612235-26") {
+        dropNotNullConstraint(columnDataType: "varchar(255)", columnName: "photo", tableName: "user")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1517992612235-27") {
+        dropNotNullConstraint(columnDataType: "varchar(255)", columnName: "username", tableName: "user")
+    }
+
 }
