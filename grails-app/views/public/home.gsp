@@ -19,7 +19,7 @@
 
         <div class="col-md-5 pull-right"><g:render template="/template/loginTemp"></g:render></div>
 
-        <div class="col-md-5"><g:render template="/template/recentShare"></g:render></div>
+        <div class="col-md-5"><g:render template="/template/topPost"></g:render></div>
 
         <div class="col-md-2"></div>
 
@@ -31,3 +31,4 @@
 <asset:javascript src="application.js"/>
 </body>
 </html>
+%{--TODO 2: TEMPLATE FOR HEADER WITH ALL ICONS--}%
