@@ -6,6 +6,7 @@
 <body>
 <asset:stylesheet src="application.css"/>
 <asset:javascript src="application.js"/>
+
 <div class="container">
     <div class="row-fluid">
         <div class="col-lg-4"><h1>Link Sharing</h1></div>
