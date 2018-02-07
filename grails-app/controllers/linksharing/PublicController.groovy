@@ -9,11 +9,13 @@ class PublicController {
     def springSecurityService
     def subscriptionService
 
+   /* demo
     @Secured(['permitAll'])
+
     def subscribe() {
         Subscription subscription = subscriptionService.subscribe(params)
         render "HELLO"
-    }
+    }*/
 
 
     //if user is already loggen in redirect the request to user/index
@@ -24,6 +26,12 @@ class PublicController {
             }
 
     }
+    def newUser(){
+
+    }
+
+
+
 }
 
 
