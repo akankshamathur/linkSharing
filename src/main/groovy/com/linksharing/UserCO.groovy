@@ -11,5 +11,8 @@ class UserCO{
     Date lastUpdated
     Boolean admin
     String photo
+    UserCO userCO=new UserCO()
+
+
 
 }

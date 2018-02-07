@@ -27,9 +27,10 @@ class PublicController {
             }
 
     }
-    def newUser(infor){
+    def newUser(userCO){
         def user = userService.createUser(params)
         [user:User]
+        
     }
 }
 
