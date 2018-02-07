@@ -13,6 +13,7 @@ class UrlMappings {
         //"/"(view: "/index")
         "/user/validUser"(controller: 'user', action: 'validUser')
         "/user/index"(controller: 'user', action: 'index')
+        "/user/see"(controller: 'user', action: 'see')
 
         "500"(view: '/error')
         "404"(view: '/notFound')
