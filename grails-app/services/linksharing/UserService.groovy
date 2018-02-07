@@ -14,6 +14,7 @@ class UserService {
         user.lastName=userCO.lastName
         user.email=userCO.email
         user.photo=userCO.photo
+        user.save(flush:true)
 
 
 
