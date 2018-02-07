@@ -184,8 +184,9 @@ table {
   border-collapse: collapse;
 }
 
-td,tr,
-th {border : none;
+td, tr,
+th {
+    border: none;
   padding: 0;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */

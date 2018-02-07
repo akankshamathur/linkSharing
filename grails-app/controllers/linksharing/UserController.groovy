@@ -1,9 +1,6 @@
 package linksharing
 
-import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.annotation.Secured
-import com.linkSharing.User
-
 
 class UserController {
 
@@ -13,11 +10,11 @@ class UserController {
     def index() {
         render springSecurityService.currentUser
     }
-    @Secured(['permitAll'])
-    def see(){
-        render (view:"/user/userDashboard")
-    }
 
+    @Secured(['permitAll'])
+    def see() {
+        render(view: "/user/userDashboard")
+    }
 
 //
 //        @Secured(['ROLE_ADMIN'])
