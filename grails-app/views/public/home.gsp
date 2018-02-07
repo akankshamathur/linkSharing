@@ -1,39 +1,33 @@
 <html>
 <head>
-
+    <title></title>
 </head>
 
-<body>
-<asset:javascript src="apple-touch-icon-retina.png "></asset:javascript>
-<asset:stylesheet href="bootstrap-theme.css.map"></asset:stylesheet>
-<div class="container">
+<body style="width: 100%">
+<asset:stylesheet src="application.css"/>
 
-    <tr>
-        <td colspan="2"><h2>Link Sharing</h2></td>
-        <td colspan="3"></td>
-    </tr>
-    <tr>
-        <td colspan="5"></td>
-    </tr>
-    <tr bgcolor="aqua">
-        <td><g:render template="/template/recentShare"></g:render></td>
-        <td colspan="3"></td>
+%{--<div class="jumbotron">
+    <h2>Link Sharing</h2>
+</div>--}%
 
-        <td><g:render template="/template/loginTemp"></g:render></td>
+<div class="container-fluid">
 
-    </tr>
-    <tr>
-        <td colspan="5"></td>
-    </tr>
-    <tr bgcolor="#f0f8ff">
-        <td></td>
-        <td><g:render template="/template/recentShare"></g:render></td>
-        <td></td>
-        <td><g:render template="/template/registerTemp"></g:render></td>
-        <td></td></tr>
-    <tr><td colspan="5"></td></tr>
-</table>
+    <div class="row">
+        <div class="col-md-5"><g:render template="/template/recentShare"></g:render></div>
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-5 pull-right"><g:render template="/template/loginTemp"></g:render></div>
+
+        <div class="col-md-5"><g:render template="/template/recentShare"></g:render></div>
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-5 pull-right"><g:render template="/template/registerTemp"></g:render></div>
+
+    </div>
+
 </div>
-
+<asset:javascript src="application.js"/>
 </body>
 </html>
