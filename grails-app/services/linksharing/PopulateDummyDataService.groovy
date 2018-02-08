@@ -9,10 +9,11 @@ class PopulateDummyDataService {
 
     def populateData() {
         dummyTopic()
+        dummySubs()
     }
 
     def dummyTopic() {
-        println "hello"
+
         //TODO 1: add data to all the tables
 
         Topic topic = new Topic()
@@ -22,7 +23,14 @@ class PopulateDummyDataService {
         user.addToTopics(topic).save(flush: true, saveOnError: true)
     }
 
-    /*dummyArticle ( ) {
+    def dummSubs() {
+        Subscription subscription = new Subscription()
+        subscription.seriousness="moderate"
+        User user = User.findById(3)
+        user.addToSubscriptions(user).save(flush:true, savOnError: true)
 
-    }*/
+    }
+
 }
+
+
