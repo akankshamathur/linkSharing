@@ -351,10 +351,21 @@ databaseChangeLog = {
     changeSet(author: "akanksha (generated)", id: "1518092794204-24") {
         dropNotNullConstraint(columnDataType: "bigint", columnName: "user_id", tableName: "subscription")
     }
+    changeSet(author: "akanksha (generated)", id: "1518094468578-15") {
+        dropForeignKeyConstraint(baseTableName: "reading_item", constraintName: "FK_93xit1asu8caf665svq0vqmeq")
 
-
-
-
-
+        addForeignKeyConstraint(baseColumnNames: "resource_id", baseTableName: "reading_item", constraintName: "FK_93xit1asu8caf665svq0vqmeq", referencedColumnNames: "id", referencedTableName: "resource")
+    }
+    changeSet(author: "akanksha (generated)", id: "1518094468578-24") {
+        dropNotNullConstraint(columnDataType: "bigint", columnName: "resource_id", tableName: "reading_item")
+    }
+    changeSet(author: "akanksha (generated)", id: "1518095499076-1") {
+        addColumn(tableName: "reading_item") {
+            column(name: "user_id", type: "bigint")
+        }
+    }
+    changeSet(author: "akanksha (generated)", id: "1518095499076-2") {
+        addForeignKeyConstraint(baseColumnNames: "user_id", baseTableName: "reading_item", constraintName: "FK_rmxs9jrphvwn7tyg2n82p8wq0", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "user")
+    }
 
 }

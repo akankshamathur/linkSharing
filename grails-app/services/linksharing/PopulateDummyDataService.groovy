@@ -10,6 +10,7 @@ class PopulateDummyDataService {
     def populateData() {
         dummyTopic()
         dummySubs()
+        dummyReadItem()
     }
 
     def dummyTopic() {
@@ -31,8 +32,12 @@ class PopulateDummyDataService {
         User user = User.findById(3)
         user.addToSubscriptions(subscription).save(flush: true, saveOnError: true)
     }
-    
+    def dummyReadItem(){
+        ReadingItem readingItem = new ReadingItem()
+        User user = User.findById(3)
+        user.addToReadingItems(readingItem).save(flush: true, saveOnError: true)
 
+    }
 }
 
 
