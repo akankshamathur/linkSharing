@@ -10,14 +10,7 @@ class PublicController {
     def springSecurityService
     def subscriptionService
     def userService
-
-    /* demo
-     @Secured(['permitAll'])
-
-     def subscribe() {
-         Subscription subscription = subscriptionService.subscribe(params)
-         render "HELLO"
-     }*/
+    def populateDummyDataService
 
     //if user is already loggen in redirect the request to user/index
     def home() {
@@ -38,7 +31,12 @@ class PublicController {
         user.password = userCO.password
         user.email = userCO.email
         userService.createUser(user)
+        //TODO: insert flash message for success/failure of operation
+    }
 
+    def test() {
+        populateDummyDataService.populateData()
+        render 'hello user'
     }
 }
 

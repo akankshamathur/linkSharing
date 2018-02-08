@@ -1,9 +1,15 @@
 package linksharing
 
+import com.linkSharing.User
 import grails.transaction.Transactional
 
 @Transactional
 class PopulateDummyDataService {
+
+
+    def populateData() {
+        dummyTopic()
+    }
 
     def dummyTopic() {
         println "hello"
@@ -12,8 +18,11 @@ class PopulateDummyDataService {
         Topic topic = new Topic()
         topic.topicName = "java"
         topic.seriousness = "high"
-        topic.save(flush: true)
-
-
+        User user = User.findById(3)
+        user.addToTopics(topic).save(flush: true, saveOnError: true)
     }
+
+    /*dummyArticle ( ) {
+
+    }*/
 }

@@ -7,7 +7,6 @@ import grails.transaction.Transactional
 class UserService {
 
     User createUser(User user) {
-
         user.save(flush: true)
     }
 }
