@@ -14,7 +14,8 @@ class Topic {
 
 
     static constraints = {
-        topicName blank: true
+        topicName nullable: true, blank: true
+        seriousness nullable: true, blank: true
     }
 
 }
