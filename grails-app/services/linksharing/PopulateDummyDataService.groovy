@@ -23,13 +23,15 @@ class PopulateDummyDataService {
         user.addToTopics(topic).save(flush: true, saveOnError: true)
     }
 
-    def dummSubs() {
+    def dummySubs() {
         Subscription subscription = new Subscription()
         subscription.seriousness="moderate"
+        Topic topic = Topic.findById(8)
+        topic.addToSubscriptions(subscription).save(flush: true, saveOnError: true)
         User user = User.findById(3)
-        user.addToSubscriptions(user).save(flush:true, savOnError: true)
-
+        user.addToSubscriptions(subscription).save(flush: true, saveOnError: true)
     }
+    
 
 }
 

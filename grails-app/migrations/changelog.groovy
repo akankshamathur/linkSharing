@@ -330,6 +330,30 @@ databaseChangeLog = {
     changeSet(author: "akanksha (generated)", id: "1518065986236-22") {
         dropNotNullConstraint(columnDataType: "bigint", columnName: "user_id", tableName: "topic")
     }
+    changeSet(author: "akanksha (generated)", id: "1518091588216-21") {
+        dropForeignKeyConstraint(baseTableName: "subscription", constraintName: "FK_tq3cq3gmsss8jjyb2l5sb1o6k")
+
+        addForeignKeyConstraint(baseColumnNames: "user_id", baseTableName: "subscription", constraintName: "FK_tq3cq3gmsss8jjyb2l5sb1o6k", referencedColumnNames: "id", referencedTableName: "user")
+    }
+    changeSet(author: "akanksha (generated)", id: "1518091588216-13") {
+        dropForeignKeyConstraint(baseTableName: "subscription", constraintName: "FK_aojatoh2ykivd0ukh09f4mn11")
+
+        addForeignKeyConstraint(baseColumnNames: "topic_id", baseTableName: "subscription", constraintName: "FK_aojatoh2ykivd0ukh09f4mn11", referencedColumnNames: "id", referencedTableName: "topic")
+    }
+    changeSet(author: "akanksha (generated)", id: "1518092794204-22") {
+        dropNotNullConstraint(columnDataType: "varchar(255)", columnName: "seriousness", tableName: "subscription")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1518092794204-23") {
+        dropNotNullConstraint(columnDataType: "bigint", columnName: "topic_id", tableName: "subscription")
+    }
+
+    changeSet(author: "akanksha (generated)", id: "1518092794204-24") {
+        dropNotNullConstraint(columnDataType: "bigint", columnName: "user_id", tableName: "subscription")
+    }
+
+
+
 
 
 
