@@ -11,7 +11,6 @@ class PublicController {
     def userService
     def populateDummyDataService
 
-    //if user is already loggen in redirect the request to user/index
 
     @Secured(['permitAll'])
     def home() {
