@@ -12,7 +12,7 @@ class UrlMappings {
         "/"(controller: 'public', action: 'home')
         //"/"(view: "/index")
 //        "/user/validUser"(controller: 'user', action: 'validUser')
-//        "/user/index"(controller: 'user', action: 'index')
+        "/user/index"(controller: 'user', action: 'index')
 //        "/user/see"(controller: 'user', action: 'see')
 ////        "/public/test"(controller: 'public', action: 'test')
 //       "public/home"(controller: 'public', action: 'home')

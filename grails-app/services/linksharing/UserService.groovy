@@ -8,6 +8,9 @@ class UserService {
 
     User createUser(User user) {
         user.save(flush: true)
+        //if (user.save())
+        //flash.message = "Congratulations , you are successfully registered"
+
     }
 }
 
