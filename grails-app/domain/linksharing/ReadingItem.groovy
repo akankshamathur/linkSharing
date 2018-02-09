@@ -4,9 +4,9 @@ import com.linkSharing.User
 
 class ReadingItem {
     Boolean isRead = Boolean.FALSE
-    Resource resource
+    User user
 
-    static belongsTo = [user: User]
+    static belongsTo = [resource : Resource]
 
     static constraints = {
         resource nullable: true, blank: true
