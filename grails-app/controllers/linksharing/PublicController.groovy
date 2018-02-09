@@ -5,7 +5,6 @@ import grails.plugin.springsecurity.annotation.Secured
 import in.fintechlabs.linksharing.SubscriptionService
 import com.linkSharing.User
 
-@Secured(['permitAll'])
 class PublicController {
     def springSecurityService
     def subscriptionService
@@ -13,6 +12,8 @@ class PublicController {
     def populateDummyDataService
 
     //if user is already loggen in redirect the request to user/index
+
+    @Secured(['permitAll'])
     def home() {
         User logged = springSecurityService.currentUser as User
         if (logged) {
@@ -21,6 +22,7 @@ class PublicController {
 
     }
 
+    @Secured(['permitAll'])
     def newUser(UserCO userCO) {
         println userCO.properties
         //convert userCO to user domain
@@ -31,8 +33,10 @@ class PublicController {
         user.password = userCO.password
         user.email = userCO.email
         userService.createUser(user)
+
         //TODO: insert flash message for success/failure of operation
     }
+
 
     def test() {
         populateDummyDataService.populateData()
