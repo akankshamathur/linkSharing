@@ -16,9 +16,6 @@ class PopulateDummyDataService {
     }
 
     def dummyTopic() {
-
-
-
         Topic topic = new Topic()
         topic.topicName = "java"
         topic.seriousness = "high"

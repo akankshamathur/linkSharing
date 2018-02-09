@@ -12,7 +12,7 @@
     <table class="table" frame="box">
         <thead class=""><h3>Register</h3></thead>
 
-        <form name="register_form" controller="public" method="get">
+        <form name="register_form" controller="public" method="post">
             <tr>
                 <td>First Name</td>
                 <td><input type="text" size="30" name="firstName" required></td>
