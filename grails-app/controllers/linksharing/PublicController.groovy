@@ -45,8 +45,19 @@ class PublicController {
     @Secured(['permitAll'])
     def list() {
 
-        def recentShareList = Resource.list(sort:"dateCreated", order:"desc" , max:5 , offset:0)
-        render(view: '/list', model: [recentShareList:Resource.list()])
+//        List<Resource> resources = Resource.createCriteria().list {
+//            [sort  : "dateCreated",
+//             order : "desc",
+//             max   : 5,
+//             offset: 0]
+//        }
+//        def resourceList = Resource.createCriteria()
+//        def result = resourceList.list {
+//            [max: 5, offset:0 , sort: "dateCreated", order: 'desc']
+//        }
+        render "hello"
+        Resource result = Resource.list(max: 5, offset:0 , sort: "dateCreated", order: 'desc')
+        render(view: '/public/recentShare', model:[recentShareList:result])
     }
 }
 
