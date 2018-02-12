@@ -55,9 +55,9 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.linkSharing.U
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.linkSharing.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.linkSharing.Role'
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/user/index'
-grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/public/home'
+grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/'
 grails.plugin.springsecurity.logout.postOnly = false
-grails.plugin.springsecurity.auth.loginFromUrl = "/public/home"
+grails.plugin.springsecurity.auth.loginFromUrl = "/"
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         [pattern: '/', access: ['permitAll']],
         [pattern: '/error', access: ['permitAll']],

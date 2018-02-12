@@ -4,37 +4,18 @@ import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.annotation.Secured
 import com.linkSharing.User
 
-
 class UserController {
 
     def springSecurityService
 
     @Secured(['ROLE_USER', 'ROLE_ADMIN'])
     def index() {
-        render(view: "/user/userDashboard")
-        //render springSecurityService.currentUser
+        render "hello user"
+//        render(view: "/userDashboard")
     }
-
-    @Secured(['permitAll'])
-    def see() {
-        render(view: "/user/userDashboard")
-    }
-
-//
-//        @Secured(['ROLE_ADMIN'])
-//        def validAdmin() {
-//            render "hello admin"
-//        }
-//        @Secured(['PermitAll'])
-//        def invalidUser() {
-//            render(view: '/public/home')
-//        }
-//        @Secured(['ROLE_USER'])
-//        def validUser() {
-//            render "hello user"
-//        }
 
 }
+
 
 
 

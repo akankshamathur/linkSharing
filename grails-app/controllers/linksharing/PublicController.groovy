@@ -18,7 +18,7 @@ class PublicController {
         if (logged) {
             redirect(controller: 'user', action: "index")
         }
-
+//TODO:fetch recent share and then pass it to home.gsp
     }
 
     @Secured(['permitAll'])
@@ -56,8 +56,8 @@ class PublicController {
 //            [max: 5, offset:0 , sort: "dateCreated", order: 'desc']
 //        }
         render "hello"
-        Resource result = Resource.list(max: 5, offset:0 , sort: "dateCreated", order: 'desc')
-        render(view: '/public/recentShare', model:[recentShareList:result])
+        Resource result = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
+        render(view: '/public/recentShare', model: [recentShareList: result])
     }
 }
 
