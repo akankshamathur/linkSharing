@@ -1,33 +1,33 @@
 <html>
 <head>
-    <style>
-    .table{
-        width: 20em;
-    }
-
-    </style>
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
 </head>
 
 <body>
 <div class="container">
-    %{--<g:each in="${}" var="a" status="i">--}%
-        %{--${i + 1}--}%
-        <table frame="box" width="700" >
-            <th style="background-color: #9acfea"><h3>Top Post</h3></th>
+    <g:each in="${topPostList}" var="a" status="i">
+        ${i + 1}
+        <table frame="box" width="700" cellpadding="0" border="2 solid" cellspacing="200">
+            <tr style="background-color: #9acfea"><td colspan="3"><h3>Top Post</h3></td></tr>
             <tr>
-                <td></td>
+                <td rowspan="3"></td>
+                <td>User ID :</td>
+                <td>${a.user}</td>
             </tr>
             <tr>
-                <td></td>
+
+                <td>Topic ID :</td>
+                <td>${a.topic}</td>
             </tr>
             <tr>
-                <td></td>
+
+                <td>Description :</td>
+                <td>${a.description}</td>
             </tr>
 
         </table>
-    %{--</g:each>--}%
+    </g:each>
 </div>
 </body>
 </html>
