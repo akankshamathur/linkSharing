@@ -14,10 +14,14 @@ class PublicController {
 
     @Secured(['permitAll'])
     def home() {
-        User logged = springSecurityService.currentUser as User
-        if (logged) {
-            redirect(controller: 'user', action: "index")
-        }
+        def result = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
+        render(view:'/public/home',model: [recentShareList: result])
+//        User logged = springSecurityService.currentUser as User
+//        if (logged) {
+//            redirect(controller: 'user', action: "index")
+//        }
+
+
 //TODO:fetch recent share and then pass it to home.gsp
     }
 
@@ -55,7 +59,12 @@ class PublicController {
 //        def result = resourceList.list {
 //            [max: 5, offset:0 , sort: "dateCreated", order: 'desc']
 //        }
-        render "hello"
+        println "hello"
+        println "hello"
+        println "hello"
+        println "hello"
+        println "hello"
+
         Resource result = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
         render(view: '/public/recentShare', model: [recentShareList: result])
     }

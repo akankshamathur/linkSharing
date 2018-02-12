@@ -28,11 +28,6 @@ class BootStrap {
         /* User user1 = new User(username: "admin2", password: "admin2", enabled: true).save(flush:true, failOnError : true)
          new UserRole(user1,adminRole).save(flush:true)*/
         // populateDummyDataService.populateData()
-//        Topic.saveAll(
-//                new Topic(topicName: 'MATHS',
-//                        seriousness: 'high')
-//        )
-//
 
     }
     def destroy = {

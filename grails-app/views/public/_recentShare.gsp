@@ -8,7 +8,7 @@
 
 Recent Share
 <div class="container">
-    <g:each in="${result}" var="a" status="i">
+    <g:each in="${recentShareList}" var="a" status="i">
     ${i + 1}<br>
     <div class="row">
         <div class="col-md-6">User ID :</div>
