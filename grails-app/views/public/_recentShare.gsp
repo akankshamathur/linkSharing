@@ -1,31 +1,33 @@
 <html>
 <head>
+    <style>
+    .table{
+        width: 20em;
+    }
+
+    </style>
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
 </head>
 
 <body>
-
-Recent Share
 <div class="container">
     <g:each in="${recentShareList}" var="a" status="i">
-    ${i + 1}<br>
-    <div class="row">
-        <div class="col-md-6">User ID :</div>
-        <div class="col-md-6"> ${a.user}<br></div>
-    </div>
-        <div class="row">
-            <div class="col-md-6">Topic ID :</div>
-            <div class="col-md-6">  ${a.topic}</div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">Description :</div>
-            <div class="col-md-6"> ${a.description}</div>
-        </div>
+        ${i + 1}
+        <table class="table" frame="box" size="30" >
+            <th style="background-color: #9acfea"><h3>Recent Share</h3></th>
+            <tr>
+                <td>User ID :${a.user}</td>
+            </tr>
+            <tr>
+                <td>Topic ID :${a.topic}</td>
+            </tr>
+            <tr>
+                <td>Description :${a.description}</td>
+            </tr>
+
+        </table>
     </g:each>
 </div>
-
-
-
 </body>
 </html>

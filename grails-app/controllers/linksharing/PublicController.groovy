@@ -20,9 +20,6 @@ class PublicController {
 //        if (logged) {
 //            redirect(controller: 'user', action: "index")
 //        }
-
-
-//TODO:fetch recent share and then pass it to home.gsp
     }
 
     @Secured(['permitAll'])

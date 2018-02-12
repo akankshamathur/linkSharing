@@ -10,8 +10,8 @@ class UserController {
 
     @Secured(['ROLE_USER', 'ROLE_ADMIN'])
     def index() {
-        render "hello user"
-//        render(view: "/userDashboard")
+//        render "hello user"
+       render(view: "user/userDashboard")
     }
 
 }
