@@ -41,6 +41,13 @@ class PublicController {
         populateDummyDataService.populateData()
         render 'hello user'
     }
+
+    @Secured(['permitAll'])
+    def list() {
+
+        def recentShareList = Resource.list(sort:"dateCreated", order:"desc" , max:5 , offset:0)
+        render(view: '/list', model: [recentShareList:Resource.list()])
+    }
 }
 
 

@@ -11,6 +11,9 @@ class UserService {
 
     def createUser(User user) {
         user.save(flush: true)
+//        if(user){
+//            flash.message = "successful"
+//        }
         Role role = Role.findByAuthority('ROLE_USER')
         UserRole.create(user,role)
     }

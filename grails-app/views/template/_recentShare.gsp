@@ -1,9 +1,18 @@
 <html>
 <head>
+    <asset:stylesheet src="application.css"/>
+    <asset:javascript src="application.js"/>
 </head>
+
 <body>
-<div class="p-3 mb-2 bg-info text-white">Recent Share</div>
-<table>
-</table>
+
+Recent Share
+
+<g:each in="${recentShareList}" var="a" status="i">
+    ${i + 1}<br>
+    User Id :   ${a.user}<br>
+    Topic ID :  ${a.topic}<br>
+</g:each>
+
 </body>
 </html>

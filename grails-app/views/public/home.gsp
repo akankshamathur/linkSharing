@@ -28,4 +28,3 @@
 </div>
 </body>
 </html>
-%{--TODO 2: TEMPLATE FOR HEADER WITH ALL ICONS--}%
