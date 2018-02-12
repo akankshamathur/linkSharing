@@ -1,21 +1,22 @@
 <html>
 <head>
-
+    <meta name="layout" content="userCommon"/>
+    <asset:stylesheet src="application.css"/>
+    <asset:javascript src="application.js"/>
 </head>
-
 <body>
-<asset:stylesheet src="application.css"/>
-<asset:javascript src="application.js"/>
-<div class="container">
-    <div class="row-fluid">
-        <div class="col-lg-4"><h1>Link Sharing</h1></div>
-        <div class="col-lg-4"><h1> <input type="text" placeholder="Search.."></h1></div>
-        <div class="col-lg-4"><h1>icon</h1></div>
+    <div class="row">
+        <div class="col-md-5"><g:render template="/user/profile"/></div>
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-5 pull-right"><g:render template="/user/inbox"/></div>
+
+        <div class="col-md-5"><g:render template="/user/subscription"/></div>
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-5 pull-right"><g:render template="/user/trendingTopics"/></div>
     </div>
-    <div class="row-fluid">
-        <div class="col-lg-6"><g:render template="/template/profile"></g:render></div>
-        <div class="col-lg-6"><g:render template="/template/inbox"></g:render></div>
-    </div>
-</div>
 </body>
 </html>

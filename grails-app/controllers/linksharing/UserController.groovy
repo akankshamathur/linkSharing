@@ -11,7 +11,8 @@ class UserController {
 
     @Secured(['ROLE_USER', 'ROLE_ADMIN'])
     def index() {
-        render springSecurityService.currentUser
+        render(view: "/user/userDashboard")
+        //render springSecurityService.currentUser
     }
 
     @Secured(['permitAll'])
