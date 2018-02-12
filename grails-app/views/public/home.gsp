@@ -19,11 +19,11 @@
 
     <div class="col-md-5 pull-right"><g:render template="/template/loginTemp"/></div>
 
-    <div class="col-md-5"><g:render template="/template/topPost"/></div>
+    <div class="col-md-5"><g:render template="/public/topPost"/></div>
 
     <div class="col-md-2"></div>
 
-    <div class="col-md-5 pull-right"><g:render template="/template/registerTemp"/></div>
+    <div class="col-md-5 pull-right"><g:render template="/public/registerTemp"/></div>
 
 </div>
 </body>

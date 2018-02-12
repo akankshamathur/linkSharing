@@ -1,5 +1,6 @@
 <html>
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title><g:layoutTitle default="Link Sharing"/></title>
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
@@ -10,14 +11,11 @@
         font-family: cursive;
 
     }
-
-    #footer {
-        background-color: #999999;
-        font-family: "Courier New";
-        height: 30px;
-        text-align: center;
-        text-decoration: wavy;
-        position: absolute;
+    .icon-size{
+        font-size: 1.5em;
+        padding-top: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
     }
     </style>
     <g:layoutHead/>
@@ -27,21 +25,16 @@
 
 <div id="header">
     <div class="row">
-        <div class="col-md-3"><h2>Link Sharing</h2></div>
+        <div class="col-md-5"><h2>Link Sharing</h2></div>
 
-        <div class="col-md-3"><h2><input class="form-control" type="text" placeholder="Search.."></h2></div>
+        <div class="col-md-4"><h2><input class="form-control" type="text" placeholder="Search.."></h2></div>
 
-        <div class="col-md-6">
-            <g:createLink controller="public" action="home"><span
-                    class="glyphicon glyphicon-chat"></span></g:createLink>
-            <g:createLink controller="public" action="home"><span
-                    class="glyphicon glyphicon-envelope"></span></g:createLink>
-            <g:createLink controller="public" action="home"><span
-                    class="glyphicon glyphicon-link"></span></g:createLink>
-            <g:createLink controller="public" action="home"><span
-                    class="glyphicon glyphicon-file"></span></g:createLink>
-            <g:createLink controller="public" action="home"><span
-                    class="glyphicon glyphicon-user"></span></g:createLink>
+        <div class="col-md-3">
+            <span class="glyphicon glyphicon-chat icon-size"></span>
+            <span class="glyphicon glyphicon-envelope icon-size"></span>
+            <span class="glyphicon glyphicon-link icon-size"></span>
+            <span class="glyphicon glyphicon-file icon-size"></span>
+            <span class="glyphicon glyphicon-user icon-size"></span>
 
         </div>
     </div>
