@@ -1,6 +1,6 @@
 <html>
 <head>
-    <meta name="layout" content="common"/>
+    <meta name="layout" content="mainCommon"/>
     <title></title>
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>

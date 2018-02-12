@@ -35,7 +35,6 @@
             <span class="glyphicon glyphicon-link icon-size"></span>
             <span class="glyphicon glyphicon-file icon-size"></span>
             <span class="glyphicon glyphicon-user icon-size"></span>
-
         </div>
     </div>
 </div>
