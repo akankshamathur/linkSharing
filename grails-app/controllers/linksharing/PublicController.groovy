@@ -10,11 +10,13 @@ class PublicController {
     def subscriptionService
     def userService
     def populateDummyDataService
+    def resourceService
 
 
     @Secured(['permitAll'])
     def home() {
         def result = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
+
         render(view:'/public/home',model: [recentShareList: result])
 //        User logged = springSecurityService.currentUser as User
 //        if (logged) {
@@ -43,28 +45,7 @@ class PublicController {
         render 'hello user'
     }
 
-    @Secured(['permitAll'])
-    def list() {
 
-//        List<Resource> resources = Resource.createCriteria().list {
-//            [sort  : "dateCreated",
-//             order : "desc",
-//             max   : 5,
-//             offset: 0]
-//        }
-//        def resourceList = Resource.createCriteria()
-//        def result = resourceList.list {
-//            [max: 5, offset:0 , sort: "dateCreated", order: 'desc']
-//        }
-        println "hello"
-        println "hello"
-        println "hello"
-        println "hello"
-        println "hello"
-
-        Resource result = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
-        render(view: '/public/recentShare', model: [recentShareList: result])
-    }
 }
 
 
