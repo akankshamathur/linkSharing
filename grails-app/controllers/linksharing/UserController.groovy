@@ -10,10 +10,11 @@ class UserController {
 
     @Secured(['ROLE_USER', 'ROLE_ADMIN'])
     def index() {
-//        render "hello user"
-       render(view: '/user/userDashboard')
+        User loggedUser=springSecurityService.currentUser
+        User user=User.get(loggedUser)
+        def topics = user.topics*.id
+        render(view: '/user/userDashboard')
     }
-
 }
 
 
