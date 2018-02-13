@@ -17,11 +17,11 @@ class PublicController {
     def home() {
         def result = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
         def topPostResult = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
-//        User logged = springSecurityService.currentUser as User
-//        if (logged) {
-//            redirect(controller: 'user', action: "index")
-//        }
         render(view: '/public/home', model: ['topPostList': topPostResult, 'recentShareList': result])
+        User logged = springSecurityService.currentUser as User
+        if (logged) {
+            redirect(controller: 'user', action: "index")
+        }
 
     }
 

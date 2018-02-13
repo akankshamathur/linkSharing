@@ -9,7 +9,7 @@
 
 <body>
 <div class="row">
-    <div class="col-md-5"><g:render template="/public/recentShare"/></div>
+    <div class="col-md-5"><g:render template="/public/recentShare" model="recentShareList"/></div>
 
     <div class="col-md-2"></div>
 
@@ -18,7 +18,7 @@
 
 <div class="row">
 
-    <div class="col-md-5"><g:render template="/public/topPost"/></div>
+    <div class="col-md-5"><g:render template="/public/topPost" model="topPostList"/></div>
 
     <div class="col-md-2"></div>
 
