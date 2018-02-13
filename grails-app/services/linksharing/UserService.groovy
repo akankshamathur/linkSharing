@@ -18,13 +18,14 @@ class UserService {
         UserRole.create(user, role)
     }
 
-    def getTopicCount(){
-
-
+    def getTopicCount(User user){
+        def getTopic = user.topics
+        println "topic count = ${getTopic.size()}"
     }
 
-    def getSubscriptionCount(){
-
+    def getSubscriptionCount(User user){
+        def getSubscription = user.subscriptions
+        println "subscription count= ${getSubscription.size()}"
     }
 }
 
