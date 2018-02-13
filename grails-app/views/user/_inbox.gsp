@@ -1,21 +1,25 @@
 <html>
 <head>
-
+    <asset:stylesheet src="application.css"/>
+    <asset:javascript src="application.js"/>
 </head>
-
 <body>
-<asset:stylesheet src="application.css"/>
-<asset:javascript src="application.js"/>
-<div class="container-fluid">
-    <table>
-        <tr>
-            <td colspan="2">Inbox</td>
-        </tr>
-        <tr>
-            <td>message 1</td>
-            <td>message 2</td>
-        </tr>
-    </table>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h3>Inbox</h3></div>
+        <div class="panel-body">
+            <table class="table table-striped" width="700">
+                <tr>
+                    <td>message 1</td>
+                    <td>content</td>
+                </tr>
+                <tr>
+                    <td>message 2</td>
+                    <td>content</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
 </body>
 </html>

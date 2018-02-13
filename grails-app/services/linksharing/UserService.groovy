@@ -15,7 +15,16 @@ class UserService {
 //            flash.message = "successful"
 //        }
         Role role = Role.findByAuthority('ROLE_USER')
-        UserRole.create(user,role)
+        UserRole.create(user, role)
+    }
+
+    def getTopicCount(){
+
+
+    }
+
+    def getSubscriptionCount(){
+
     }
 }
 
