@@ -30,13 +30,18 @@
         <div class="col-md-4"><h2><input class="form-control" type="text" placeholder="Search.."></h2></div>
 
         <div class="col-md-3">
-            <span class="glyphicon glyphicon-comment icon-size"></span>
+            <a href="/template/_createTopic.gsp" data-target="#createTopic" data-toggle="modal">
+                <span class="glyphicon glyphicon-comment icon-size"></span>
+            </a>
             <span class="glyphicon glyphicon-envelope icon-size"></span>
             <span class="glyphicon glyphicon-link icon-size"></span>
             <span class="glyphicon glyphicon-file icon-size"></span>
             <span class="glyphicon glyphicon-user icon-size"></span>
         </div>
     </div>
+</div>
+<div class="modal fade text-center" id="createTopic" role="dialog">
+
 </div>
 <g:layoutBody/>
 </body>

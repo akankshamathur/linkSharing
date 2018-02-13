@@ -14,8 +14,8 @@ class UserController {
         User user=springSecurityService.currentUser
         def topicCount=userService.getTopicCount(user)
         def subscriptionCount=userService.getSubscriptionCount(user)
-        render(view: '/user/userDashboard' , model:[topicCountInfo: topicCount, subscriptionCountInfo: subscriptionCount , username:user])
-
+        render(view: '/user/userDashboard' ,
+                model:[topicCountInfo: topicCount, subscriptionCountInfo: subscriptionCount , username:user])
     }
 }
 
