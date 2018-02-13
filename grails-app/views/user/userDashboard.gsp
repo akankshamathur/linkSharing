@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="row">
-        <div class="col-md-5 pull-left"><g:render template="/user/profile"/></div>
+        <div class="col-md-5 pull-left"><g:render template="/user/profile" /></div>
 
         <div class="col-md-2"></div>
 

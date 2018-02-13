@@ -11,10 +11,11 @@ class UserController {
 
     @Secured(['ROLE_USER', 'ROLE_ADMIN'])
     def index() {
-        User loggedUser=springSecurityService.currentUser
-        userService.getTopicCount(loggedUser)
-        userService.getSubscriptionCount(loggedUser)
-        render(view: '/user/userDashboard' , model: [])
+        User user=springSecurityService.currentUser
+        def topicCount=userService.getTopicCount(user)
+        def subscriptionCount=userService.getSubscriptionCount(user)
+        render(view: '/user/userDashboard' , model:[topicCountInfo: topicCount, subscriptionCountInfo: subscriptionCount , username:user])
+
     }
 }
 

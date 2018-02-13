@@ -15,9 +15,9 @@ class PublicController {
 
     @Secured(['permitAll'])
     def home() {
-        def result = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
+        def recentShareResult = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
         def topPostResult = Resource.list(max: 5, offset: 0, sort: "dateCreated", order: 'desc')
-        render(view: '/public/home', model: ['topPostList': topPostResult, 'recentShareList': result])
+        render(view: '/public/home', model: ['topPostList': topPostResult, 'recentShareList': recentShareResult])
         User logged = springSecurityService.currentUser as User
         if (logged) {
             redirect(controller: 'user', action: "index")

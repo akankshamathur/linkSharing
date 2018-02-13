@@ -9,20 +9,19 @@
         <div class="panel-heading"><h3>Profile</h3></div>
         <div class="panel-body">
             <table class="table table-striped" width="200px">
-                %{--<g:each in="" var="" status="i">--}%
+
                     <tr>
                         <td>User ID :</td>
-                        <td></td>
+                        <td>${username}</td>
                     </tr>
                     <tr>
                         <td>No. of topics:</td>
-                        <td></td>
+                        <td>${topicCountInfo}</td>
                     </tr>
                     <tr>
                         <td>No. of subscription :</td>
-                        <td></td>
+                        <td>${subscriptionCountInfo}</td>
                     </tr>
-                %{--</g:each>--}%
             </table>
         </div>
     </div>

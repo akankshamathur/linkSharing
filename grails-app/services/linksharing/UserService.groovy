@@ -19,13 +19,15 @@ class UserService {
     }
 
     def getTopicCount(User user){
-        def getTopic = user.topics
-        println "topic count = ${getTopic.size()}"
+        def getTopicSet = user.topics
+        def topicCount = getTopicSet.size()
+        return topicCount
     }
 
     def getSubscriptionCount(User user){
-        def getSubscription = user.subscriptions
-        println "subscription count= ${getSubscription.size()}"
+        def getSubscriptionSet = user.subscriptions
+        def subscriptionCount= getSubscriptionSet.size()
+        return subscriptionCount
     }
 }
 
