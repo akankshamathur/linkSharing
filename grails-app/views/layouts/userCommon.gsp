@@ -30,7 +30,7 @@
         <div class="col-md-4"><h2><input class="form-control" type="text" placeholder="Search.."></h2></div>
 
         <div class="col-md-3">
-            <span class="glyphicon glyphicon-chat icon-size"></span>
+            <span class="glyphicon glyphicon-comment icon-size"></span>
             <span class="glyphicon glyphicon-envelope icon-size"></span>
             <span class="glyphicon glyphicon-link icon-size"></span>
             <span class="glyphicon glyphicon-file icon-size"></span>
