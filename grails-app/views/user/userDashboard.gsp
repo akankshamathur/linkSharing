@@ -18,7 +18,7 @@
 
         <div class="col-md-2"></div>
 
-        <div class="col-md-5 pull-right"><g:render template="/user/trendingTopics"/></div>
+        <div class="col-md-5 pull-right"><g:render template="/resource/resource"/></div>
     </div>
 </body>
 </html>

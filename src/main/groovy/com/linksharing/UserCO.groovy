@@ -17,7 +17,7 @@ class UserCO implements Validateable {
         username blank: true, unique: true, nullable: true
         email unique: true, nullable: true, blank: true
         photo nullable: true, blank: true
-        firstName nullable: true, blank: true
+        firstName nullable: true, blank: true, match:[]
         lastName nullable: true, blank: true
         confirmPassword nullable: true, blank: true
         //confirmPassword validate(){

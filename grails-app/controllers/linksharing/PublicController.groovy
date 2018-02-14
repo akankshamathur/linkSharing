@@ -36,8 +36,9 @@ class PublicController {
         user.password = userCO.password
         user.email = userCO.email
         userService.createUser(user)
-
-        //TODO: insert flash message for success/failure of operation
+        flash.message ="You have been registered"
+        redirect(action:"home")
+        //render "<div class='alert alert-info'> You have been registered</div>"
     }
 
 

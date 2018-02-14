@@ -1,11 +1,4 @@
-<html>
-<head>
-    <asset:stylesheet src="application.css"/>
-    <asset:javascript src="application.js"/>
-</head>
 
-<body>
-<div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading"><h3>Top Post</h3></div>
 
@@ -30,6 +23,3 @@
             </table>
         </div>
     </div>
-</div>
-</body>
-</html>

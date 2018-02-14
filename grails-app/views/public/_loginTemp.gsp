@@ -1,12 +1,4 @@
-<html>
-<head>
 
-</head>
-
-<body>
-<asset:stylesheet src="application.css"/>
-<asset:javascript src="application.js"/>
-<div class="container-fluid">
     <div class="panel panel-primary">
         <div class="panel-heading"><h3>Login</h3></div>
 
@@ -31,6 +23,3 @@
             </table>
         </div>
     </div>
-</div>
-</body>
-</html>

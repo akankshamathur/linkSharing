@@ -17,5 +17,6 @@ class TopicController {
         topic.topicName = topicCO.topicName
         topic.seriousness = topicCO.seriousness
         topicService.newTopic(topic)
+        render "You have successfully created a topic"
     }
 }

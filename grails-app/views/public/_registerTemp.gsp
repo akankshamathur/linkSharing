@@ -1,13 +1,4 @@
-<html>
-<head>
 
-</head>
-
-<body>
-<link rel="stylesheet" href="grails-app/assets/stylesheets">
-<link rel="stylesheet" href="grails-app/assets/javascripts">
-
-<div class="container-fluid">
 
     <div class="panel panel-primary">
         <div class="panel-heading"><h3>Register</h3></div>
@@ -56,6 +47,3 @@
             </table>
         </div>
     </div>
-</div>
-</body>
-</html>
