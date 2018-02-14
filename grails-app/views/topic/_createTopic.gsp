@@ -22,14 +22,14 @@
                     </tr>
                     <tr>
                         <td>Visibility</td>
-                        <td><select required>
-                            <option name="public">Public</option>
-                            <option name="private">private</option>
+                        <td><select name="seriousness" required>
+                            <option name="public" value="public">Public</option>
+                            <option name="private" value="private">Private</option>
                         </select></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="col-lg-3">
-                            <g:actionSubmit class="btn btn-primary btn-block" value="save">SAVE</g:actionSubmit>
+                            <g:submitButton name="submit" class="btn btn-primary btn-block" value="save">SAVE</g:submitButton>
                     </tr>
 
                 </g:form>

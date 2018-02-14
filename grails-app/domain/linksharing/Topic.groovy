@@ -22,3 +22,4 @@ class Topic {
         user nullable: true, blank: true
     }
 }
+

@@ -14,7 +14,7 @@
             <table class="table table-striped">
                 <form method="POST" action="/login/authenticate">
                     <tr>
-                        <td>Email/Username</td>
+                        <td>Username</td>
                         <td><input type="text" size="30" name="username" required></td>
                     </tr>
                     <tr>
