@@ -11,7 +11,7 @@
             <table class="table table-striped" width="200px">
 
                     <tr>
-                        <td>User ID :</td>
+                        <td>WELCOME</td>
                         <td>${username}</td>
                     </tr>
                     <tr>

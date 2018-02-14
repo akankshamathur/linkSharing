@@ -30,11 +30,18 @@
         <div class="col-md-4"><h2><input class="form-control" type="text" placeholder="Search.."></h2></div>
 
         <div class="col-md-3">
-            <span id =''class="glyphicon glyphicon-comment icon-size"></span>
-            <span class="glyphicon glyphicon-envelope icon-size"></span>
-            <span class="glyphicon glyphicon-link icon-size"></span>
-            <span class="glyphicon glyphicon-file icon-size"></span>
-            <span class="glyphicon glyphicon-user icon-size"></span>
+            <div class="dropdown">
+                <span class="glyphicon glyphicon-comment icon-size"></span>
+                <span class="glyphicon glyphicon-envelope icon-size"></span>
+                <span class="glyphicon glyphicon-link icon-size"></span>
+                <span class="glyphicon glyphicon-file icon-size"></span>
+                <span class="glyphicon glyphicon-user icon-size"></span>
+                <span class="caret" type="button" data-toggle="dropdown"></span>
+                    <ul class="dropdown-menu">
+                        <li><g:link controller="logout" action="">LOGOUT</g:link> </li>
+                    </ul>
+            </div>
+
         </div>
     </div>
 </div>
