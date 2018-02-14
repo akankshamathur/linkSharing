@@ -14,7 +14,7 @@
 
         <div class="panel-body">
             <table class="table table-striped">
-                <form name="create_topic" controller="topic" method="post">
+                <g:form name="create_topic" controller="topic" method="post" action="createTopic">
 
                     <tr>
                         <td>Topic Name</td>
@@ -29,11 +29,10 @@
                     </tr>
                     <tr>
                         <td colspan="2" class="col-lg-3">
-                            <g:actionSubmit class="btn btn-primary btn-block" value="save"
-                                            action="createTopic">SAVE</g:actionSubmit>
+                            <g:actionSubmit class="btn btn-primary btn-block" value="save">SAVE</g:actionSubmit>
                     </tr>
 
-                </form>
+                </g:form>
             </table>
         </div>
     </div>

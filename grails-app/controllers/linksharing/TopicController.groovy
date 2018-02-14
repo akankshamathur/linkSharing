@@ -2,6 +2,7 @@ package linksharing
 
 import grails.plugin.springsecurity.annotation.Secured
 
+
 class TopicController {
 
     @Secured(['ROLE_USER'])
