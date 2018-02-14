@@ -6,15 +6,6 @@ class TopicController {
 
     @Secured(['ROLE_USER'])
     def createTopic(){
-        render "create topic"
-    }
-    def list(){
-
-    }
-    def edit(){
-
-    }
-    def delete(){
-
+        render "create a topic"
     }
 }

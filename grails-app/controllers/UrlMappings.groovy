@@ -11,6 +11,7 @@ class UrlMappings {
 
         "/"(controller: 'public', action: 'home')
         '/user/index'(controller: 'user', action: 'index')
+        '/topic/createTopic'(controller: 'topic', action: 'createTopic')
         "500"(view: '/error')
         "404"(view: '/notFound')
     }

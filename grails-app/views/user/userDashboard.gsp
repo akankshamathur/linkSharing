@@ -14,8 +14,7 @@
     </div>
 <div class="row">
 
-
-        <div class="col-md-5 pull-left"><g:render template="/user/createTopic"/></div>
+        <div class="col-md-5 pull-left"><g:render template="/topic/createTopic" /></div>
 
         <div class="col-md-2"></div>
 

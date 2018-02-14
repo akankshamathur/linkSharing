@@ -14,8 +14,8 @@
 
         <div class="panel-body">
             <table class="table table-striped">
-                <form name="create_from" controller="topic" method="post">
-                    <tbody>
+                <form name="create_topic" controller="topic" method="post">
+
                     <tr>
                         <td>Topic Name</td>
                         <td><input type="text" size="30" name="topicName" required></td>
@@ -28,12 +28,10 @@
                         </select></td>
                     </tr>
                     <tr>
-                        <td class="col-md-6">
-                            <g:actionSubmit class="btn btn-success btn-block" value="SAVE"
-                                            action="createTopic">Save</g:actionSubmit></td>
-                        <td class="col-md-6"><button type="reset" class="btn btn-primary btn-block" value="Reset">Reset</button></td>
+                        <td colspan="2" class="col-lg-3">
+                            <g:actionSubmit class="btn btn-primary btn-block" value="save"
+                                            action="createTopic">SAVE</g:actionSubmit>
                     </tr>
-                    </tbody>
 
                 </form>
             </table>
