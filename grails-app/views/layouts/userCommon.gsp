@@ -30,12 +30,7 @@
         <div class="col-md-4"><h2><input class="form-control" type="text" placeholder="Search.."></h2></div>
 
         <div class="col-md-3">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Launch demo modal
-            </button>
-
-                <span class="glyphicon glyphicon-comment icon-size"></span>
-
+            <span id =''class="glyphicon glyphicon-comment icon-size"></span>
             <span class="glyphicon glyphicon-envelope icon-size"></span>
             <span class="glyphicon glyphicon-link icon-size"></span>
             <span class="glyphicon glyphicon-file icon-size"></span>
@@ -43,11 +38,9 @@
         </div>
     </div>
 </div>
-<div class="modal fade text-center" id="createTopic" role="dialog">
-        <div class="modal-content">
-        </div>
+
+
 </div>
-<g:render template="/template/createTopic"></g:render>
 <g:layoutBody/>
 </body>
 </html>
