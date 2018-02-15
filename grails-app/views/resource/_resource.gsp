@@ -15,13 +15,7 @@
                     <td>Description</td>
                     <td><input type="textarea" size="30" name="linkDescription" required></td>
                 </tr>
-                <tr>
-                    <td>Topic</td>
-                    <td><select name="topic" required>
-                        <option name="public" value="public">Public</option>
-                        <option name="private" value="private">Private</option>
-                    </select></td>
-                </tr>
+
                 <tr>
                     <td colspan="2" class="col-lg-3">
                         <g:submitButton name="submit" class="btn btn-primary btn-block" value="save">SAVE</g:submitButton>
