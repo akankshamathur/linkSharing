@@ -22,34 +22,34 @@ class PublicController {
         if (logged) {
             redirect(controller: 'user', action: "index")
         }
-
     }
-
     @Secured(['permitAll'])
     def newUser(UserCO userCO) {
         println userCO.properties
-        //convert userCO to user domain
         User user = new User()
-        user.firstName = userCO.firstName
-        user.lastName = userCO.lastName
-        user.username = userCO.username
-        user.password = userCO.password
-        user.email = userCO.email
-        if(user.validate()){
-            userService.createUser(user)
-            flash.message ="Welcome to Link Sharing , you have successfully registered"
-            redirect(action:'home')
-        }
-        else {
-            user.errors.allErrors.each {
-                println it
+        if(userCO.validate()){
+            user.firstName = userCO.firstName
+            user.lastName = userCO.lastName
+            user.username = userCO.username
+            user.password = userCO.password
+            user.email = userCO.email
+
+            if(user.validate()){
+                userService.createUser(user)
+                flash.message ="Welcome to Link Sharing , you have successfully registered"
+                redirect(action:'home')
+            }
+            else {
+                user.errors.allErrors.each {
+                    println it
+                }
             }
         }
-
+        else {
+            flash.message="unsuccessful"
+        }
 
     }
-
-
     def test() {
         populateDummyDataService.populateData()
         render 'hello user'

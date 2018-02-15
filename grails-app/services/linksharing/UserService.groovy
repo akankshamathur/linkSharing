@@ -10,7 +10,7 @@ import grails.transaction.Transactional
 class UserService {
 
     def createUser(User user) {
-        user.save(flush: true)
+        user.save(flush:true)
         Role role = Role.findByAuthority('ROLE_USER')
         UserRole.create(user, role)
     }

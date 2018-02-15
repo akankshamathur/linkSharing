@@ -11,14 +11,14 @@ class UserCO implements Validateable {
     String email
     String photo
 
-
     static constraints = {
-        password blank: true, password: true, nullable: true
-        username blank: false, unique: true, nullable: false, match:("[a-zA-z]")
+        firstName nullable: true, blank: true, match:("[a-zA-z]+")
+        lastName nullable: true, blank: true, match:("[a-zA-z]+")
+        username blank: true, unique: true, nullable: false, match:("[a-zA-z]+")
         email unique: true, nullable: true, blank: true
         photo nullable: true, blank: true
-        firstName nullable: true, blank: true, match:("[a-zA-z]")
-        lastName nullable: true, blank: true, match:("[a-zA-z]")
+        password blank: true, password: true, nullable: true, validator:{val,obj,errors->
+                                            if(!(obj.confirmPassword == val)) errors.rejectValue('password','Does not match')}
         confirmPassword nullable: true, blank: true
     }
 }
