@@ -14,6 +14,7 @@
         });
 
     </script>
+    <script src="form-validation.js"></script>
 </head>
 <body>
 <div class="panel panel-primary">
