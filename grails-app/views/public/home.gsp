@@ -8,6 +8,8 @@
 </head>
 
 <body>
+<div class="alert" style="display:block"><p align="center" style="text-decoration-color: #255625" ><b>
+    ${flash.message}</b></p></div>
 <div class="row">
     <div class="col-md-5 pull-left"><g:render template="/public/recentShare" model="recentShareList"/></div>
 

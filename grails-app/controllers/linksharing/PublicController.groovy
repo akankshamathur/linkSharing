@@ -36,9 +36,9 @@ class PublicController {
         user.password = userCO.password
         user.email = userCO.email
         userService.createUser(user)
-        flash.message ="You have been registered"
-        redirect(action:"home")
-        //render "<div class='alert alert-info'> You have been registered</div>"
+        flash.message ="Welcome to Link Sharing , you have successfully registered"
+        redirect(action:'home')
+
     }
 
 

@@ -14,7 +14,7 @@ class UserCO implements Validateable {
 
     static constraints = {
         password blank: true, password: true, nullable: true
-        username blank: false, unique: true, nullable: false,match:("[a-zA-z]")
+        username blank: false, unique: true, nullable: false, match:("[a-zA-z]")
         email unique: true, nullable: true, blank: true
         photo nullable: true, blank: true
         firstName nullable: true, blank: true, match:("[a-zA-z]")
