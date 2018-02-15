@@ -8,11 +8,11 @@ class PopulateDummyDataService {
 
 
     def populateData() {
-        dummyTopic()
-        dummySubs()
-        dummyResource()
-        dummyReadItem()
-        dummyResourceRating()
+//        dummyTopic()
+//        dummySubs()
+//        dummyResource()
+//        dummyReadItem()
+//        dummyResourceRating()
     }
 
     def dummyTopic() {
@@ -33,10 +33,10 @@ class PopulateDummyDataService {
     }
     def dummyResource(){
         Resource resource = new Resource()
-        resource.description="core java"
-        Topic topic = Topic.findById(1)
+        resource.description="International Language spanish"
+        Topic topic = Topic.findById(14)
         topic.addToResources(resource).save(flush: true, saveOnError: true)
-        User user = User.findById(3)
+        User user = User.findById(34)
         user.addToResources(resource).save(flush: true, saveOnError: true)
     }
     def dummyReadItem(){
