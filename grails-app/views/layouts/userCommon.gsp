@@ -36,17 +36,15 @@
                 <span class="glyphicon glyphicon-link icon-size"></span>
                 <span class="glyphicon glyphicon-file icon-size"></span>
                 <span class="glyphicon glyphicon-user icon-size"></span>
-                <span class="caret" type="button" data-toggle="dropdown"></span>
+
+                    <span class="caret" type="button" data-toggle="dropdown"></span>
                     <ul class="dropdown-menu">
                         <li><g:link controller="logout" action="">LOGOUT</g:link> </li>
                     </ul>
-            </div>
 
+            </div>
         </div>
     </div>
-</div>
-
-
 </div>
 <g:layoutBody/>
 </body>

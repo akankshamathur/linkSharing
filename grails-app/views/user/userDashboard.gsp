@@ -10,7 +10,7 @@
 
         <div class="col-md-2"></div>
 
-        <div class="col-md-5 pull-right"><g:render template="/user/inbox"/></div>
+        <div class="col-md-5 pull-right"><g:render template="/resource/resource"/></div>
     </div>
 <div class="row">
 
@@ -18,7 +18,7 @@
 
         <div class="col-md-2"></div>
 
-        <div class="col-md-5 pull-right"><g:render template="/resource/resource"/></div>
+        <div class="col-md-5 pull-right"></div>
     </div>
 </body>
 </html>
